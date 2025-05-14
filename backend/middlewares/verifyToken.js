@@ -1,18 +1,17 @@
 const { expressjwt: jwt } = require("express-jwt");
-
 const db = require("../models");
 
 const secret = process.env.SECRET;
 
 const verifyToken = () => {
   return [
-    // authenticate JWT token and attach decoded token to request as req.user
+    // authenticate JWT token and attach decoded token to request as req.auth
     jwt({ secret, algorithms: ["HS256"] }),
 
     // attach full user record to request object
     async (req, res, next) => {
       // get user with id from token 'sub' (subject) property
-      const user = await db.User.findByPk(req.user.sub);
+      const user = await db.User.findByPk(req.auth.sub); // <- changed req.user.sub to req.auth.sub
 
       // check if user exists
       if (!user) {
@@ -20,7 +19,7 @@ const verifyToken = () => {
       }
 
       // authentication successful
-      req.user = user.get();
+      req.user = user.get(); // attach the full user object
       next();
     },
   ];
