@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Open Sans:400,600,800');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: local('Gilroy-Bold'), url(./fonts/Gilroy-Bold.woff);
+}
+
+.form-label {
+  font-weight: normal;
+  padding-top: 10px;
+}
+
+.normal-text {
+  font-weight: normal;
+}
+
+main {
+  min-height: 55vh;
+}
+
+.sign-in:hover {
+  background-color: #333940;
+}
+
+.btn {
+  border-radius: 4px;
+}
+
+.form-control {
+  border-radius: 4px;
+}
+
+// .btn:active {
+//   transform: translate(0px, 5px);
+//   -webkit-transform: translate(0px, 5px);
+//   box-shadow: 0px 1px 0px 0px;
+// }
+
+.disabled-btn {
+  cursor: not-allowed;
+}
+
+.hover-none:hover {
+  text-decoration: none;
+}

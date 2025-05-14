@@ -1,0 +1,41 @@
+{
+  "name": "cred_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm start --prefix ../frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "deep-email-validator": "^0.1.18",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "express-jwt": "^8.5.1",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^9.0.2",
+    "luhn-js": "^1.1.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.14.1",
+    "node-cron": "^3.0.0",
+    "nodemailer": "^6.5.0",
+    "sequelize": "^6.5.0",
+    "sequelize-cli": "^6.2.0",
+    "sequelize-mysql-timestamp": "^1.4.0",
+    "swagger-ui-express": "^4.1.6",
+    "twilio": "^5.6.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7"
+  }
+}
